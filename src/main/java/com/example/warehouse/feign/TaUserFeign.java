@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "taUserFeign", url = "127.0.0.1:8083", path = "pub/tauser")
+@FeignClient(value = "pub", path = "tauser")
 public interface TaUserFeign {
     @GetMapping("selectBatchIds")
     List<TaUserDTO> selectBatchIds(@RequestParam String[] ids);

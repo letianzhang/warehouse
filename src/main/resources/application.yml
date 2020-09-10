@@ -3,11 +3,9 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 spring:
-  datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/clinic?currentSchema=warehouse
-    username: postgres
-    password: zhang123
   application:
     name: warehouse
+  profiles:
+    active: dev
 server:
   port: 0
